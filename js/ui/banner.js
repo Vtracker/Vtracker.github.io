@@ -28,7 +28,7 @@ function generateBanner(title) {
   for (let i = 0; i < title.length; i++) {
     const char = title[i];
     let charBox = document.createElement("div");
-    let rn = 4;
+    let rn = 3.5;
     charBox.innerHTML = "<span class='char'>" + char + "</span>";
     let charSize = rn + "rem";
 

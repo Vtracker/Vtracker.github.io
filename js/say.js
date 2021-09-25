@@ -6,10 +6,14 @@
  * @param {string} author
  * @param {string} from
  */
+console.log("say success");
+
 function say(content, author, from) {
   document.querySelector("#say-content").innerText = content;
+  console.log(content);
   if (author) {
     document.querySelector("#say-author").innerText = author;
+    console.log(author);
   }
   if (from) {
     document.querySelector("#say-from").innerText = "「" + from + "」";
