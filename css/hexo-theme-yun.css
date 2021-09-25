@@ -278,15 +278,11 @@ input {
   font-family: Lato;
   font-size: var(--banner-char-size, 1rem);
   font-weight: 250;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0);
   line-height: 1;
   transition-property: all;
   transition-duration: 0.3s;
   transition-delay: 0s;
-}
-.char:hover {
-  color: #fff;
-  background-color: var(--banner-char-color);
 }
 .char-left,
 .char-right {
@@ -1769,7 +1765,7 @@ input {
   left: 0;
   width: 20rem;
   background-color: #fff;
-  background-image: url("/images/2.jpg");
+  background-image: url("/images/3.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom 1rem center;

@@ -6,7 +6,6 @@
  * @param {string} author
  * @param {string} from
  */
-console.log("say success");
 
 function say(content, author, from) {
   document.querySelector("#say-content").innerText = content;
