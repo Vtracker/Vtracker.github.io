@@ -22,10 +22,17 @@ function say(content, author, from) {
 /**
  * 获取在线 API
  */
+
+fetchApiToSay();
+
 function fetchApiToSay() {
+  console.log("111");
   if (CONFIG.say.api) {
+    console.log("222");
     fetch(CONFIG.say.api)
       .then((res) => {
+        console.log("res");
+        console.log(res);
         if (res.ok) {
           res.json().then((data) => {
             if (CONFIG.say.hitokoto) {
@@ -49,6 +56,10 @@ function fetchApiToSay() {
         console.error(err.message);
       });
   }
+}
+
+function fetchDatatoSay() {
+
 }
 
 document.addEventListener("DOMContentLoaded", fetchApiToSay);
