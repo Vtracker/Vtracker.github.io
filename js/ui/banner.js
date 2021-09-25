@@ -28,20 +28,13 @@ function generateBanner(title) {
   for (let i = 0; i < title.length; i++) {
     const char = title[i];
     let charBox = document.createElement("div");
-    let rn = random(1.5, 3.5);
+    let rn = 4;
     charBox.innerHTML = "<span class='char'>" + char + "</span>";
     let charSize = rn + "rem";
 
     charBox.classList.add("char-box");
     charContainer.appendChild(charBox);
 
-    if (i % 2 === 0) {
-      charBox.classList.add("char-left");
-      charBox.style.animationName = "char-move-left";
-    } else {
-      charBox.classList.add("char-right");
-      charBox.style.animationName = "char-move-right";
-    }
     charBox.style.setProperty("--banner-char-size", charSize);
 
     const width = window
@@ -51,9 +44,11 @@ function generateBanner(title) {
 
     sumH += rn;
   }
+  charContainer.style.padding = '1rem 0';
   let height = "calc(50vh - " + sumH / 2 + "rem)";
   lineTop.style.setProperty("--banner-line-height", height);
-  lineBottom.style.setProperty("--banner-line-height", height);
+  let heightBot = "calc(40vh - " + sumH / 2 + "rem)";
+  lineBottom.style.setProperty("--banner-line-height", heightBot);
 
   // set animation name
   lineTop.style.animationName = "extend-line";
