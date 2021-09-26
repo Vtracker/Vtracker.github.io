@@ -110,7 +110,7 @@ function createFireworks(
     let p = {};
     p.x = x;
     p.y = y;
-    p.color = "#000";
+    p.color = "#FFB138";
     p.radius = 0.1;
     p.alpha = 0.5;
     p.lineWidth = 6;
@@ -156,8 +156,7 @@ function createFireworks(
         easing: "easeOutExpo",
         update: renderParticule,
       })
-      .add(
-        {
+      .add({
           targets: circle,
           radius: anime.random(config.orbitRadius.min, config.orbitRadius.max),
           lineWidth: 0,
