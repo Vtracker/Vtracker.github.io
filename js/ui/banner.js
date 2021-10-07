@@ -29,7 +29,7 @@ function generateBanner(title) {
     const char = title[i];
     let charBox = document.createElement("div");
     let rn = 3.5;
-    charBox.innerHTML = "<span class='char'>" + char + "</span>";
+    charBox.innerHTML = "<span class='char' style='font-weight:10'>" + char + "</span>";
     let charSize = rn + "rem";
 
     charBox.classList.add("char-box");
